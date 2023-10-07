@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+### Project notes for the team
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## ChatGPT LLM prompting link
+https://chat.openai.com/share/72cae400-c4a2-4b38-9277-f3c33f1bd595
 
-## Available Scripts
+## Setup database for the first time
+1. Login to PostgreSQL through the CLI:
+``
+psql -U postgres
+``
 
-In the project directory, you can run:
+2. Create a database:
+``
+CREATE DATABASE ecommerce_db;
+``
 
-### `npm start`
+3. Connect to the newly created database:
+``
+\c ecommerce_db
+``
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4. Create the table
+```
+CREATE TABLE products (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    price NUMERIC(10, 2) NOT NULL
+);
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+5. Insert rows into the table
+```
+INSERT INTO products (name, price) VALUES ('Product 1', 19.99);
+INSERT INTO products (name, price) VALUES ('Product 2', 29.99);
+```
 
-### `npm test`
+6. Show contents
+```
+-- List all tables in the database
+\dt
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-- Show the structure of the "products" table
+\d products
 
-### `npm run build`
+-- Retrieve data from the "products" table
+SELECT * FROM products;
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup application
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. If NPM packages has not been installed yet, run the following command first within the root directory as well as the my-ecommerce-backend directory:
+``
+npm install
+``
+2. Go into my-ecommerce-back-end directory, and start the webserver which contains the API
+``
+node app.js
+``
+2. Go back to the root directory, and start the React application:
+``
+npm start
+``
