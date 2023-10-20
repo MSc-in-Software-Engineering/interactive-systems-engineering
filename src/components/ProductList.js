@@ -1,7 +1,7 @@
 // ProductList.js
 
 import React, { useEffect, useState } from 'react';
-import { getProducts, createProduct, updateProduct, deleteProduct } from './api';
+import { getProducts, createProduct, updateProduct, deleteProduct } from '../api';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
 function ProductList() {
