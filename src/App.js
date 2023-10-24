@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import AdminPage from './pages/AdminPage';
+import ProductDetailPage from './pages/ProductDetailPage';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <div className="App">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container">
-            <Link to="/" className="navbar-brand">Your Logo</Link>
+            <Link to="/" className="navbar-brand">ECOMMERCE</Link> {/* Updated logo text */}
             <ul className="navbar-nav ml-auto flex-row align-items-center">
             <li className="nav-item" style={{ marginRight: '10px' }}>
               <Link to="/" className="nav-link">Home</Link>
@@ -34,6 +35,8 @@ function App() {
             <Route path="/admin">
               <AdminPage />
             </Route>
+            {/* Add a route for product details */}
+          <Route path="/products/:productId" component={ProductDetailPage} />
             <Route path="/">
               <HomePage />
             </Route>
