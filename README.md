@@ -1,7 +1,13 @@
 ### Project notes for the team
 
 ## ChatGPT LLM prompting link
-https://chat.openai.com/share/72cae400-c4a2-4b38-9277-f3c33f1bd595
+- First session: https://chat.openai.com/share/72cae400-c4a2-4b38-9277-f3c33f1bd595
+- Second session: https://chat.openai.com/share/7e5efe2a-ad2e-4a22-b632-f8830df15c3e
+- Third session: https://chat.openai.com/share/dc9377e5-50a9-46c1-9560-ddba51e356e7
+- Fourth session: https://chat.openai.com/share/1573e0be-3905-4870-8ba4-f98f1dd109e7
+- Fifth session: https://chat.openai.com/share/9aca3148-8996-4b62-9de1-6e8c6754a48a
+- Sixth session: https://chat.openai.com/share/3d33bfad-fa84-4dd9-a40b-b83e3f186168
+- Seventh session: https://chat.openai.com/share/0ba10cd6-a375-4d19-8a19-3554ee8bef5d
 
 ## Setup database for the first time
 1. Login to PostgreSQL through the CLI:
