@@ -66,3 +66,21 @@ node app.js
 ``
 npm start
 ``
+
+## Unit test
+
+1. Go to the source directory /src, and run:
+``
+npm test
+``
+2. Unit test(s) should now be running.
+
+##  GUI testing
+1. To initialize GUI testing, run cypress with the following:
+``
+npx cypress open
+``
+2. Cypress GUI should now open on the following address:
+``
+127.0.0.1:59501
+``
