@@ -160,6 +160,7 @@ function ProductList() {
           placeholder="Product Name"
           value={newProduct.name}
           onChange={(e) => setNewProduct({ ...newProduct, name: e.target.value })}
+          data-testid="product-name-input"
         />
         <input
           type="number"
@@ -167,8 +168,9 @@ function ProductList() {
           placeholder="Product Price"
           value={newProduct.price}
           onChange={(e) => setNewProduct({ ...newProduct, price: e.target.value })}
+          data-testid="product-price-input"
         />
-        <button className="btn btn-success" onClick={handleCreateProduct}>
+        <button className="btn btn-success" onClick={handleCreateProduct} data-testid="add-product-button">
           Add Product
         </button>
       </div>
